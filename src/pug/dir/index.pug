@@ -1,0 +1,53 @@
+extends /layout/layout
+
+block data
+  -
+    page = {
+      canonical: CANONICAL_ROOT,
+      page_type: 'article',
+      og_image: 'ogp.png',
+      title: 'ページタイトル',
+      description: 'ページディスクリプション',
+      // keywords: 'ページキーワード',
+    }
+
+block css
+  link(href=CSS_DIR + 'index.css' rel='stylesheet' type='text/css')
+  
+block script
+  script(src=JS_DIR + 'index.js' type='text/javascript' charset='UTF-8')
+
+block content
+  section
+    header.header
+      ul.header__list
+        li.header__item
+          a.header__A.mScroll(href="#orange") 
+            p ORANGE
+        li.header__item
+          a.header__A.mScroll(href="#purple") 
+            p PURPLE
+        li.header__item
+          a.header__A.mScroll(href="#green") 
+            p GREEN
+        
+    #smooth-scroll
+      #smooth-content
+        .wrapper 
+          .mv
+          .cont.orange#orange
+            .image.inview: img(src=IMAGE_DIR+"icon.jpg")
+            .border
+            .image.inview: img(src=IMAGE_DIR+"icon.jpg")
+
+          .cont.purple#purple
+            .image.inview: img(src=IMAGE_DIR+"icon.jpg")
+            .border
+            .image.inview: img(src=IMAGE_DIR+"icon.jpg")
+
+          .cont.green#green
+            .image.inview: img(src=IMAGE_DIR+"icon.jpg")
+            .border
+            .image.inview: img(src=IMAGE_DIR+"icon.jpg")
+
+block modal
