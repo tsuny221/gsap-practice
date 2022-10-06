@@ -36,18 +36,67 @@ block content
         .wrapper 
           .mv
           .cont.orange#orange
-            .image.inview: img(src=IMAGE_DIR+"icon.jpg")
+            .box.inview
+              a.cont__A.modalOpen(href="#modal_1_1")
+                .image: img.lazyload(data-src=IMAGE_DIR+"index_1.jpg" data-aspectratio=(250/358))
             .border
-            .image.inview: img(src=IMAGE_DIR+"icon.jpg")
+            .box.inview
+              a.cont__A.modalOpen(href="#modal_1_2") 
+                .image: img.lazyload(data-src=IMAGE_DIR+"index_2.jpg" data-aspectratio=(250/358))
+            .box.inview
+              a.cont__A.modalOpen(href="#modal_1_3") 
+                .image: img.lazyload(data-src=IMAGE_DIR+"index_2.jpg" data-aspectratio=(250/358))
+            .box.inview
+              a.cont__A.modalOpen(href="#modal_1_4") 
+                .image: img.lazyload(data-src=IMAGE_DIR+"index_2.jpg" data-aspectratio=(250/358))
 
           .cont.purple#purple
-            .image.inview: img(src=IMAGE_DIR+"icon.jpg")
+            .box.inview
+              a.cont__A.modalOpen(href="#modal_2_1") 
+                .image.inview: img.lazyload(data-src=IMAGE_DIR+"index_3.jpg" data-aspectratio=(250/358))
             .border
-            .image.inview: img(src=IMAGE_DIR+"icon.jpg")
+            .box.inview
+              a.cont__A.modalOpen(href="#modal_2_2") 
+                .image.inview: img.lazyload(data-src=IMAGE_DIR+"index_4.jpg" data-aspectratio=(250/358))
 
           .cont.green#green
-            .image.inview: img(src=IMAGE_DIR+"icon.jpg")
+            .box.inview
+              a.cont__A.modalOpen(href="#modal_3_1") 
+                .image.inview: img.lazyload(data-src=IMAGE_DIR+"index_5.jpg" data-aspectratio=(250/358))
             .border
-            .image.inview: img(src=IMAGE_DIR+"icon.jpg")
+            .box.inview
+              a.cont__A.modalOpen(href="#modal_3_2") 
+                .image.inview: img.lazyload(data-src=IMAGE_DIR+"index_6.jpg" data-aspectratio=(250/358))
 
 block modal
+  .modal.modalClose
+
+    .modal__wrap
+
+      .modal__cont
+
+        .modal__close
+          a.modal__closeA.modalClose(href="#") X 
+
+        ul.modal__list 
+          p.modal__ttl look1
+          li.modal__item#modal_1_1
+            img(src=IMAGE_DIR+"index_1.jpg", alt="")
+          li.modal__item#modal_1_2
+            img(src=IMAGE_DIR+"index_2.jpg", alt="")
+          li.modal__item#modal_1_3
+            img(src=IMAGE_DIR+"index_2.jpg", alt="")
+          li.modal__item#modal_1_4
+            img(src=IMAGE_DIR+"index_2.jpg", alt="")
+
+          p.modal__ttl look2
+          li.modal__item#modal_2_1
+            img(src=IMAGE_DIR+"index_3.jpg", alt="")
+          li.modal__item#modal_2_2
+            img(src=IMAGE_DIR+"index_4.jpg", alt="")
+
+          p.modal__ttl look3
+          li.modal__item#modal_3_1
+            img(src=IMAGE_DIR+"index_5.jpg", alt="")
+          li.modal__item#modal_3_2
+            img(src=IMAGE_DIR+"index_6.jpg", alt="")
