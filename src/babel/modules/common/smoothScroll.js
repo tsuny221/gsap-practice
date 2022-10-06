@@ -97,7 +97,13 @@ class SmoothScroll {
 
     //ターゲット位置の取得メソッド
     this.offset = (elm) => {
-      let rect = elm.getBoundingClientRect();
+      let targetElm
+      if (elm.parentElement.className === "pin-spacer") {
+        targetElm = elm.parentElement;
+      } else {
+        targetElm = elm;
+      }
+      let rect = targetElm.getBoundingClientRect();
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       return rect.top + scrollTop;
     };
